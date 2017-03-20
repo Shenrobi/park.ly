@@ -14,6 +14,9 @@
 		E41B72121E6527A5004B72B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E41B72101E6527A5004B72B3 /* LaunchScreen.storyboard */; };
 		E41B721D1E6527A9004B72B3 /* park_lyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41B721C1E6527A9004B72B3 /* park_lyTests.swift */; };
 		E41B72281E6527AA004B72B3 /* park_lyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41B72271E6527AA004B72B3 /* park_lyUITests.swift */; };
+		E4D5D8291E65331A00E3F0F0 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D5D8281E65331A00E3F0F0 /* RoundButton.swift */; };
+		E4D5D82D1E653A5900E3F0F0 /* ParkingSpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D5D82C1E653A5900E3F0F0 /* ParkingSpot.swift */; };
+		E4D5D8301E653DEE00E3F0F0 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D5D82F1E653DEE00E3F0F0 /* LocationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		E41B72231E6527AA004B72B3 /* park.lyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = park.lyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E41B72271E6527AA004B72B3 /* park_lyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = park_lyUITests.swift; sourceTree = "<group>"; };
 		E41B72291E6527AA004B72B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4D5D8281E65331A00E3F0F0 /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		E4D5D82C1E653A5900E3F0F0 /* ParkingSpot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkingSpot.swift; sourceTree = "<group>"; };
+		E4D5D82F1E653DEE00E3F0F0 /* LocationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +103,11 @@
 		E41B72061E6527A4004B72B3 /* park.ly */ = {
 			isa = PBXGroup;
 			children = (
+				E4D5D82E1E653DD500E3F0F0 /* Services */,
+				E4D5D8271E6532E000E3F0F0 /* Model */,
+				E4D5D8261E6532DC00E3F0F0 /* View */,
+				E4D5D8251E6532D600E3F0F0 /* Controller */,
 				E41B72071E6527A4004B72B3 /* AppDelegate.swift */,
-				E41B72091E6527A4004B72B3 /* ViewController.swift */,
 				E41B720B1E6527A4004B72B3 /* Main.storyboard */,
 				E41B720E1E6527A5004B72B3 /* Assets.xcassets */,
 				E41B72101E6527A5004B72B3 /* LaunchScreen.storyboard */,
@@ -123,6 +132,38 @@
 				E41B72291E6527AA004B72B3 /* Info.plist */,
 			);
 			path = park.lyUITests;
+			sourceTree = "<group>";
+		};
+		E4D5D8251E6532D600E3F0F0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E41B72091E6527A4004B72B3 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		E4D5D8261E6532DC00E3F0F0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E4D5D8281E65331A00E3F0F0 /* RoundButton.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		E4D5D8271E6532E000E3F0F0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E4D5D82C1E653A5900E3F0F0 /* ParkingSpot.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E4D5D82E1E653DD500E3F0F0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E4D5D82F1E653DEE00E3F0F0 /* LocationService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,7 +303,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4D5D8291E65331A00E3F0F0 /* RoundButton.swift in Sources */,
 				E41B720A1E6527A4004B72B3 /* ViewController.swift in Sources */,
+				E4D5D8301E653DEE00E3F0F0 /* LocationService.swift in Sources */,
+				E4D5D82D1E653A5900E3F0F0 /* ParkingSpot.swift in Sources */,
 				E41B72081E6527A4004B72B3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -512,6 +556,7 @@
 				E41B722E1E6527AA004B72B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E41B722F1E6527AA004B72B3 /* Build configuration list for PBXNativeTarget "park.lyTests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +565,7 @@
 				E41B72311E6527AA004B72B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E41B72321E6527AA004B72B3 /* Build configuration list for PBXNativeTarget "park.lyUITests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +574,7 @@
 				E41B72341E6527AA004B72B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

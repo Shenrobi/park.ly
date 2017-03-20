@@ -1,26 +1,87 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="park_ly" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vh8-EQ-eqZ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Park.ly" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="26X-dN-6d7">
+                                        <rect key="frame" x="114.5" y="12" width="90" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="1iY-rl-qfG"/>
+                                            <constraint firstAttribute="width" constant="90" id="yM5-v9-HgV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.85882352941176465" green="0.32549019607843138" blue="0.18823529411764706" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Ays-aV-rX3"/>
+                                    <constraint firstItem="26X-dN-6d7" firstAttribute="centerX" secondItem="Vh8-EQ-eqZ" secondAttribute="centerX" id="Gdc-bH-WKd"/>
+                                    <constraint firstItem="26X-dN-6d7" firstAttribute="centerY" secondItem="Vh8-EQ-eqZ" secondAttribute="centerY" constant="2" id="P4f-Tr-KlM"/>
+                                </constraints>
+                            </view>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="wgw-D5-hEP">
+                                <rect key="frame" x="0.0" y="60" width="320" height="420"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="txo-8f-3iM" customClass="RoundButton" customModule="park_ly" customModuleProvider="target">
+                                <rect key="frame" x="123" y="375" width="75" height="75"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="F4y-YD-nHq"/>
+                                    <constraint firstAttribute="width" constant="75" id="as9-sR-xuv"/>
+                                </constraints>
+                                <state key="normal" image="parkCar"/>
+                                <connections>
+                                    <action selector="parkButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kP9-qA-KV2"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wgw-D5-hEP" secondAttribute="bottom" id="6R2-vg-iNE"/>
+                            <constraint firstAttribute="trailing" secondItem="Vh8-EQ-eqZ" secondAttribute="trailing" id="FCU-V5-OwQ"/>
+                            <constraint firstItem="Vh8-EQ-eqZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="GQo-Rm-Q50"/>
+                            <constraint firstItem="wgw-D5-hEP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Nkr-kE-8Ve"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="txo-8f-3iM" secondAttribute="bottom" constant="30" id="T9D-HE-wkF"/>
+                            <constraint firstItem="wgw-D5-hEP" firstAttribute="top" secondItem="Vh8-EQ-eqZ" secondAttribute="bottom" id="ZT7-HZ-GbX"/>
+                            <constraint firstItem="txo-8f-3iM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bNT-AE-bkT"/>
+                            <constraint firstItem="Vh8-EQ-eqZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fu6-Oq-5Ai"/>
+                            <constraint firstAttribute="trailing" secondItem="wgw-D5-hEP" secondAttribute="trailing" id="gtt-41-CQo"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="wgw-D5-hEP" id="udE-Fv-BNb"/>
+                        <outlet property="parkButton" destination="txo-8f-3iM" id="zjK-k2-saD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="135" y="138.75"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="parkCar" width="51" height="39"/>
+    </resources>
 </document>
